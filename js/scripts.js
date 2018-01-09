@@ -115,10 +115,10 @@ function setGamePoints() {
     computerPointsElem.innerHTML = computer.score;
 }
 function checkGameWinner() {
-    if (player.score == 2) {
+    if (player.score == 10) {
         result.innerHTML = '<b>The winner is ' + player.name + '</b>';
         gameState ='ended';
-    } else if (computer.score == 2) {
+    } else if (computer.score == 10) {
         result.innerHTML = '<b>The winner is computer</b>';
         gameState = 'ended';
     } 
