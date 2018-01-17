@@ -41,6 +41,10 @@ function setGameElements() {
         case 'ended':
             newGameBtn.innerText = 'Jeszcze raz';
             result.style.display = 'block';
+            playerPickElem.innerText = "Player selection";
+            computerPickElem.innerText = "Computer selection";
+            playerResultsElem.innerText = "Player Score";
+            computerResultsElem.innerText = "Computer Score";
         case 'notStarted':
             console.log('notstarted');
         default:
@@ -106,6 +110,8 @@ function checkRoundwinner(playerPick, computerPick) {
         } else if (winnerIs == 'computer') {
             computerResultsElem.innerHTML = 'Win!';
             computer.score++
+        } else {
+            playerResultsElem.innerHTML = computerResultsElem.innerHTML = 'Draw!';
         }
         setGamePoints();
         checkGameWinner();
